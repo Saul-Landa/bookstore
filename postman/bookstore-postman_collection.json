@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "bfb37801-042e-4891-8c5a-65c64fc2da7f",
+		"name": "Bookstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8697932"
+	},
+	"item": [
+		{
+			"name": "FInd with many params",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password_secure",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/book?author=Stephen King",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book"
+					],
+					"query": [
+						{
+							"key": "bookName",
+							"value": "El resplandor",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "Stephen King"
+						},
+						{
+							"key": "year",
+							"value": "1983",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user_admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password_secure",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "0bacb56c-68f8-4e56-9742-9c30e1423e74"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\": \"Carrie\",\r\n    \"author\": \"Stephen King\",\r\n    \"releaseDate\": \"1974\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password_secure",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\": \"Carrie\",\r\n    \"author\": \"Stephen King\",\r\n    \"releaseDate\": \"1975\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/book?bookName=El padrino",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "Test",
+							"disabled": true
+						},
+						{
+							"key": "bookName",
+							"value": "El padrino"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password_secure",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/book?author=Mario Puzo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book"
+					],
+					"query": [
+						{
+							"key": "bookName",
+							"value": "Divina comedia",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "Mario Puzo"
+						},
+						{
+							"key": "year",
+							"value": "1975",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find with one param",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password_secure",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user_admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/book/search/El padrino",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"search",
+						"El padrino"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
