@@ -27,7 +27,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/book?author=Stephen King",
+					"raw": "http://localhost:8080/api/book?bookName=El padrino",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,12 +40,12 @@
 					"query": [
 						{
 							"key": "bookName",
-							"value": "El resplandor",
-							"disabled": true
+							"value": "El padrino"
 						},
 						{
 							"key": "author",
-							"value": "Stephen King"
+							"value": "Stephen King",
+							"disabled": true
 						},
 						{
 							"key": "year",
@@ -80,7 +80,7 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"uuid": "0bacb56c-68f8-4e56-9742-9c30e1423e74"
+						"uuid": "fbfaac27-d9be-479b-af92-fd1a6cd606e8"
 					}
 				],
 				"body": {
@@ -137,7 +137,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/book?bookName=El padrino",
+					"raw": "http://localhost:8080/api/book?bookName=Carrie",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -155,7 +155,7 @@
 						},
 						{
 							"key": "bookName",
-							"value": "El padrino"
+							"value": "Carrie"
 						}
 					]
 				}
@@ -183,7 +183,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/book?author=Mario Puzo",
+					"raw": "http://localhost:8080/api/book?bookName=Carrie",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -196,12 +196,12 @@
 					"query": [
 						{
 							"key": "bookName",
-							"value": "Divina comedia",
-							"disabled": true
+							"value": "Carrie"
 						},
 						{
 							"key": "author",
-							"value": "Mario Puzo"
+							"value": "Mario Puzo",
+							"disabled": true
 						},
 						{
 							"key": "year",
@@ -234,7 +234,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/book/search/El padrino",
+					"raw": "http://localhost:8080/api/book/search/Stephen King",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -244,7 +244,7 @@
 						"api",
 						"book",
 						"search",
-						"El padrino"
+						"Stephen King"
 					]
 				}
 			},
